@@ -9,4 +9,27 @@
 // Global
 body {
   padding-top: 70px;
+
+  .order-image {
+    float: left;
+    width: 30%;
+    height: 30%;
+  }
+  .order-line_item {
+    padding: 5px;
+    border: solid 1px black;
+    overflow: hidden;
+  }
+
+  .order-description {
+    font-size: 100%;
+    position: relative;
+    float: right;
+    width: 300px;
+  }
+
+  .order-name {
+    margin: 0px;
+  }
 }
+
