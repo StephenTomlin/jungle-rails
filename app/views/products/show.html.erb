@@ -28,4 +28,22 @@
 
   </article>
 
+    <% if current_user %>
+      <div>
+      <h4>WRITE A REVIEW</h4>
+      <%= form_for @review, url: product_reviews_path(@product) do |f| %>
+        <dd><%= f.label :rating %></dd>
+        <dd><%= f.select :rating, [1, 2, 3, 4, 5] %></dd>
+        <dd><%= f.label :description %></dd>
+        <dd><%= f.text_area :description %></dd>
+        <dd><%= f.submit %></dd>
+      <% end %>
+    <%end %>
+      <h4>REVIEWS</h4>
+        <% @product.reviews.reverse.each do |review| %>
+          <%= render partial: 'products/reviews', locals: {review: review } %>
+          </div>
+        <%end %>
+      </div>
+
 </section>
