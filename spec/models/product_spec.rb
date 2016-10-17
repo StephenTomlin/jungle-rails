@@ -4,7 +4,7 @@ RSpec.describe Product, type: :model do
   context 'Can only exist if all fields are filled for a product' do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:price_cents)}
-  #  it { is_expected.to validate_presence_of(:quantity)}
+    it { is_expected.to validate_presence_of(:quantity)}
     it { is_expected.to validate_presence_of(:category_id)}
   end
   context 'errors' do
